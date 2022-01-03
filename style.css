@@ -1,0 +1,581 @@
+/* Colors
+blue: #4389a2
+purple: #b86a9e
+subscribe: #92e4fd
+h4: #4c637f
+sections: #eef7fb
+p: #b3b3b3
+darker p: #454545
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Roboto, sans-serif;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 2.25rem;
+  line-height: 1.1;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-weight: 400;
+  font-size: 1.875rem;
+  line-height: 1.2;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+h4 {
+  font-size: 24px;
+  color: #4c637f;
+  font-weight: normal;
+}
+
+p {
+  color: #b3b3b3;
+}
+
+section {
+  padding: 84px 0;
+}
+
+hr {
+  width: 40px;
+  height: 5px;
+  border: none;
+  margin: 30px auto 0;
+  background-color: #b86a9e;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 35px;
+}
+
+.text-section {
+  flex-direction: column;
+}
+
+.color-section {
+  background-color: #eef7fb;
+}
+
+header {
+  background-image: linear-gradient(rgba(67, 137, 162, 0.7), rgba(67, 137, 162, 0.7)),
+    url(img/heroimg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  padding: 0 50px;
+}
+
+header * {
+  color: #fff;
+}
+
+.header-text {
+  max-width: 500px;
+  margin-left: 5%;
+}
+
+header h1 {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 3rem;
+  line-height: 1.1;
+}
+
+.header-p {
+  margin-top: 15px;
+}
+
+/* Intro Section */
+
+.intro-title {
+  font-size: 36px;
+  font-weight: normal;
+  margin-top: 20px;
+}
+
+.intro-p {
+  margin: 25px 0;
+}
+
+.btn-container {
+  margin-bottom: 20px;
+}
+
+.btn {
+  color: #fff;
+  background-color: #00bcff;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 10px 30px;
+  /* box-shadow: 2px 2px 5px 1px #4389a2; */
+  box-shadow: 0px 0px 10px #00bcff;
+  border: none;
+  font-size: 14px;
+  font-family: "Open sans", sans-serif;
+  transition: 0.3s;
+  position: relative;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #60d5ff;
+  box-shadow: 0px 0px 30px #00bcff;
+}
+
+.btn::before {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #60d5ff;
+  left: 0;
+  top: 120%;
+  transform: perspective(100px) rotateX(50deg) scale(1, 0.75);
+  filter: blur(25px);
+  opacity: 0.7;
+}
+
+.btn:hover::before {
+  opacity: 1;
+}
+
+.btn-purple {
+  background-color: #ff00aa;
+  margin-left: 40px;
+  box-shadow: 0px 0px 10px 1px #ff00aa;
+}
+
+.btn-purple:hover {
+  background-color: #ff4dc3;
+  box-shadow: 0px 0px 30px #ff00aa;
+}
+
+.btn-purple::before {
+  background-color: #ff00aa;
+}
+
+/* Section Section  */
+
+.card {
+  max-width: 25%;
+  margin-top: 10px;
+  border-bottom: 2px solid transparent;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  border-bottom: 2px solid #b86a9e;
+}
+
+.card-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 150px;
+}
+
+.card:hover .card-img-border {
+  width: 110px;
+  height: 110px;
+  box-shadow: 0px 0px 10px #eb8ccb;
+}
+
+.card-img-border {
+  width: 100px;
+  height: 100px;
+  border: 4px solid #b86a9e;
+  box-shadow: 0px 0px 0px #eb8ccb;
+  border-radius: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.card-img svg {
+  width: 52px;
+  fill: #b86a9e;
+}
+
+.card-title {
+  margin: 15px 0;
+}
+
+.card-p {
+  color: #454545;
+  margin: 20px 20px 30px;
+}
+
+/* Section Three  */
+.gallery {
+  margin: 50px 0;
+}
+
+.gallery-img {
+  width: 100%;
+  display: block;
+}
+
+.img-overlay {
+  width: 30%;
+  height: fit-content;
+  margin: 1%;
+  position: relative;
+}
+
+.img-overlay::before {
+  content: "+";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(rgba(67, 137, 162, 0.7), rgba(67, 137, 162, 0.7));
+  opacity: 0;
+  transition: opacity 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 40px;
+}
+
+.img-overlay:hover::before {
+  opacity: 1;
+}
+
+.work-btn {
+  border-radius: 0;
+}
+
+/* Section Four  */
+
+.section-four {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    linear-gradient(rgba(67, 137, 162, 0.6), rgba(67, 137, 162, 0.6)), url(img/city.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.section-four .container {
+  margin: 70px auto;
+  width: 80%;
+}
+
+.stats-card {
+  width: 23%;
+  display: flex;
+  align-items: center;
+  margin: 1%;
+}
+
+.stats-img {
+  display: inline-block;
+  margin-right: 30px;
+}
+
+.stats-img svg {
+  width: 64px;
+  fill: #fff;
+}
+
+.stats-text {
+  text-align: left;
+  color: #fff;
+}
+
+.stats-text p {
+  color: #fff;
+  font-weight: 500;
+}
+
+/* Section Five */
+
+.section-five {
+  text-align: center;
+}
+
+.section-five p {
+  max-width: 650px;
+  margin: 30px auto 40px;
+}
+
+/* Section Six */
+
+.section-six .container {
+  margin: 30px auto 0;
+  max-width: 1120px;
+}
+
+.section-six img {
+  width: 14%;
+  margin: 1.3%;
+}
+
+/* Section Seven */
+
+.section-seven {
+  background-color: #4389a2;
+  color: #fff;
+  text-align: left;
+}
+
+.section-seven .container {
+  margin: 20px auto;
+  max-width: 1120px;
+}
+
+.col-60 {
+  width: 60%;
+}
+
+.col-40 {
+  width: 40%;
+}
+
+.section-seven h2 {
+  max-width: 70%;
+}
+
+form {
+  margin: 0 10px;
+}
+
+input {
+  display: block;
+  width: 100%;
+  height: 50px;
+  border: 2px solid #fff;
+  background: transparent;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+form button.btn {
+  background-color: #92e4fd;
+  border-radius: 3px;
+  margin-top: 20px;
+}
+
+form button.btn:hover {
+  background-color: #6bdafc;
+  color: #000;
+}
+
+/* Footer */
+footer {
+  padding: 40px 0;
+  background-color: #333;
+}
+
+footer p {
+  color: #fff;
+  font-size: 13px;
+}
+
+footer a {
+  color: #bde1ee;
+  text-decoration: underline;
+}
+
+footer a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+@media (max-width: 1200px) {
+  .section-six .container {
+    max-width: 960px;
+  }
+
+  .section-seven .container {
+    max-width: 960px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .section-four .container {
+    width: auto;
+  }
+
+  .section-seven .container {
+    margin: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 0;
+  }
+
+  .first-section br {
+    display: none;
+  }
+
+  .card {
+    max-width: 50%;
+  }
+
+  /* .img-overlay {
+    height: 250px;
+    object-fit: cover;
+  } */
+
+  /* .gallery-img {
+    height: 250px;
+    object-fit: cover;
+  } */
+
+  .section-four .container {
+    margin: 0 auto;
+  }
+
+  .stats-card {
+    width: 48%;
+    height: 200px;
+    justify-content: center;
+  }
+
+  .section-six img {
+    width: 35%;
+    margin: 5%;
+  }
+
+  .section-seven .container {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 650px) {
+  .img-overlay {
+    width: 47%;
+  }
+
+  .col-60 {
+    width: 100%;
+  }
+
+  .section-seven h2 {
+    max-width: 70%;
+    margin: 20px auto;
+  }
+
+  .col-40 {
+    margin-top: 40px;
+    width: 100%;
+  }
+
+  form {
+    width: 70%;
+    margin: auto;
+  }
+}
+
+@media (max-width: 500px) {
+  .header-text {
+    margin: 0 5%;
+  }
+
+  header h1 {
+    font-size: 2.5rem;
+  }
+
+  .intro-title {
+    font-size: 30px;
+  }
+
+  .btn-container {
+    margin: 0;
+    display: flex;
+    width: 100%;
+  }
+
+  .btn-container button {
+    display: inline-block;
+    margin: 0 auto 20px;
+    padding: 0;
+    width: 50%;
+    min-width: 110px;
+    height: 40px;
+  }
+
+  .card {
+    max-width: 100%;
+  }
+
+  .img-overlay {
+    width: 96%;
+  }
+
+  .section-four .container {
+    width: 100%;
+  }
+
+  .stats-card {
+    width: 44%;
+    margin: 3%;
+    height: 160px;
+  }
+
+  .section-six img {
+    width: 40%;
+    margin: 3%;
+  }
+}
+
+@media (max-width: 380px) {
+  .stats-card {
+    width: 94%;
+  }
+
+  .section-seven h2 {
+    max-width: 100%;
+  }
+
+  form {
+    width: 100%;
+  }
+}
